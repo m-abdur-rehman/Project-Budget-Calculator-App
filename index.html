@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budgeting App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+    <h1 >Budgeting App</h1>
+
+    <div id="budgetSection">
+        <h2 class="formHeading1">Total Budget</h2>
+        <form id="budgetForm">
+            <input type="number" id="totalBudgetInput" placeholder="Enter total amount" class="formInput">
+            <button type="submit" id="setBudgetButton">Set Budget</button>
+        </form>
+    </div>
+
+    <div id="expenseSection">
+        <h2 class="formHeading2">Expense</h2>
+        <form id="expenseForm">
+            <input type="number" id="amountInput" placeholder="Total amount" class="formInput">
+            <select id="categoryInput" class="formInput">
+                <option value="">Select category</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Food">Food</option>
+                <option value="Food">Food</option>
+                <option value="Credit and Loans">Credit And Loans</option>
+                <option value="gift-cards">Gift Cards</option>
+            </select>
+            <input type="text" id="descriptionInput" placeholder="Description (max 250 characters)" class="formInput">
+            <input type="date" id="dueDateInput" class="formInput">
+            <button type="submit" id="addExpenseButton">Add Expense</button>
+        </form>
+    </div>
+
+    <div id="summarySection">
+        <h2 class="formHeading3">Summary</h2>
+        <table id="summaryTable">
+            <tr>
+                <th>Total Budget</th>
+                <td id="totalBudgetCell"></td>
+            </tr>
+            <tr>
+                <th>Total Expenses</th>
+                <td id="totalExpensesCell"></td>
+            </tr>
+            <tr>
+                <th>Balance</th>
+                <td id="balanceCell"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="expensesTableSection">
+        <h2 class="formHeading4">Expenses</h2>
+        <table id="expensesTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Expense Amount</th>
+                <th>Description</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="expensesTableBody">
+              <!-- Expense rows will be dynamically added here -->
+            </tbody>
+          </table>
+    </div>
+      
+
+    <script src="script.js"></script>
+</body>
+</html>
